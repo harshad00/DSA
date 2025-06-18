@@ -113,7 +113,7 @@
 // !13. Reverse the string "hello" → "olleh"
 //  ? with method
  
-let str = "Hello";
+// let str = "Hello";
 
 // console.log(str.split('').reverse().join(''));
 
@@ -184,28 +184,66 @@ let str = "Hello";
 // let d = '*'.repeat(num.length - 4) + num.slice(-4)
 // console.log(d);
 
+// ? without methods
 
-let num1 = '1234567890'
-let  masked = ''
+// let num1 = '1234567890'
+// let  masked = ''
 
-for (let i = 0; num1[i] !== undefined; i++){
+// for (let i = 0; num1[i] !== undefined; i++){
 
-    if (i < num1.length - 4) {
+//     if (i < num1.length - 4) {
         
-        masked += '*'
-    }
-    else {
-        masked +=  num1[i]
-    }
-}
-console.log(masked);
+//         masked += '*'
+//     }
+//     else {
+//         masked +=  num1[i]
+//     }
+// }
+// console.log(masked);
 
 
   
 
 // !16. Convert "welcome to js" to title case → "Welcome To Js"
 
+// let str = "welcome to js";
+
+// let words = str.split(" "); // Split into words
+// let titleCased = [];
+
+// for (let i = 0; i < words.length; i++) {
+//     let word = words[i];
+//     // Capitalize first letter + rest of the word
+//     let capitalized = word[0].toUpperCase() + word.slice(1);
+//     titleCased.push(capitalized);
+// }
+
+// console.log(titleCased.join(" "));
+ 
+
+
 // !17. Extract only the domain from email "user@example.com" → "example.com"
+
+// let email = "user@example.com";
+// let domain = "";
+// let foundAt = false;
+// // console.log(email[8]);
+
+
+// for (let i = 0; email[i] !== undefined; i++) {
+//     if (foundAt) {
+//         domain += email[i];
+//         console.log("0");
+        
+//     }
+//     if (email[i] === '@') {
+//         foundAt = true;
+//         console.log('1');
+        
+//     }
+// }
+
+// console.log(domain);
 
 // !18. Use padStart() to convert "5" to "005" (length 3).
 
