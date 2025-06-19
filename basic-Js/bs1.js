@@ -246,22 +246,181 @@
 // console.log(domain);
 
 // !18. Use padStart() to convert "5" to "005" (length 3).
+// let str = '5'
+//   let do1 = str.padStart(3, '0')
+ 
+// console.log(do1);
+
 
 // !19. Compare "Hello" and "hello" — case-insensitive check.
 
+// let a = 'Hello';
+// let b = 'hello';
+
+// if (a.toLowerCase === b.toLowerCase) {
+//     console.log(`it's same`);
+    
+// }
+// else {
+//     console.log(`it's no same`);
+    
+// }
 // !20. Replace all occurrences of "a" with "@" in "anagram" → "@n@gr@m"
+
+// let str = "anagram"
+// let newstr = ''
+
+// for (let i = 0; i < str.length; i++){
+//     if (str[i] === 'a') {
+//         newstr+='@'
+//     }
+//     else {
+//         newstr+=str[i]
+//     }
+    
+// }
+// console.log(newstr);
+
 
 // Todo: 🔥 Questions 21–30 (Challenging/Bonus)
 
 // !21. Write a function to check if a string is a palindrome (e.g., "madam").
 
+// function palindrome(str) {
+//     let rstr = str.split('').reverse().join('');
+//     console.log(rstr);
+//     if (str === rstr) {
+//         console.log('true');
+//         return true
+//     }
+    
+// }
+// palindrome('madam')
+
+// function palindrome(str) {
+//     let rstr= ''
+//     for (let i = str.length - 1; i >= 0; i--){
+//       rstr += str[i]
+//     }
+//     console.log(rstr);
+    
+//     if (str === rstr) {
+//        console.log('true');
+//         return true;
+       
+//     }
+//     else {
+//         console.log('false');
+//         return false;
+        
+//     }
+// }
+
+// palindrome('madsassghr2')
+
 // !22. Count the number of vowels in a string.
+// function numofvowels(str) {
+//     let vowels = 'aeiou'
+//     let countofvowels = 0;
+//     for (let i = 0; i < str.length; i++){
+    
+//         for (let j = 0; j < vowels.length; j++){
+            
+//             if (str[i] === vowels[j]) {
+//               countofvowels += 1
+//           }
+//         }
+//     }
+//     console.log(countofvowels);
+    
+// }
+
+// numofvowels("harshad")
+
 
 // !23. Remove duplicate characters from "programming" → "progamin"
 
+// function removedubchar(str) {
+//     let nodupchar = '';
+
+//     for (let i = 0; i < str.length; i++) {
+//         let alreadyExists = false;
+
+//         for (let j = 0; j < nodupchar.length; j++) {
+//             if (str[i] === nodupchar[j]) {
+//                 alreadyExists = true;
+//                 break;
+//             }
+//         }
+
+//         if (!alreadyExists) {
+//             nodupchar += str[i];
+//         }
+//     }
+
+//     console.log(nodupchar);
+// }
+
+// removedubchar("programming"); // Output: progamin
+
+
 // !24. Find the most frequent character in "mississippi" → "s"
 
+// function mostfrequentchar(str) {
+
+//     let freq = {};
+//     let maxChar = '';
+//     let maxCount = 0;
+
+//     for (let i = 0; i < str.length; i++){
+//         let char = str[i];
+//         console.log(freq[char]);
+        
+//         if (freq[char]) {
+//             freq[char]++;
+//         }
+//         else {
+//             freq[char] = 1;
+//         }
+//         console.log(freq);
+        
+
+//         if (freq[char] > maxCount) {
+//             maxCount = freq[char];
+//             maxChar = char;
+//         }
+      
+//     }
+//     console.log("most frequent character: ", maxChar ," = ", maxCount, "times");
+    
+// }
+// mostfrequentchar("mississippi")
+
+
 // !25. Convert "camelCase" to "camel-case" (insert - before each capital).
+
+
+// function cov(str) {
+//     let newchar = ''
+//     for (let i = 0; i < str.length; i++){
+//         let char = str[i]
+   
+//         if (char >= 'A' && char <= 'Z') {
+//             newchar += '-' + char.toLowerCase();
+//         }
+//         else {
+//             newchar +=char
+//         }
+
+//     }
+//     let ans = newchar
+//     console.log(ans);
+    
+
+//  }
+ 
+//  cov("camelCase")
+  
 
 // !26. Convert "hello_world" to "Hello World" (nice formatting task).
 
