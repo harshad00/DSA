@@ -424,15 +424,333 @@
 
 // !26. Convert "hello_world" to "Hello World" (nice formatting task).
 
+// function cov(str) {
+//     let word = '_'
+//     let neww = ''
+
+//     for (let i = 0; i < str.length; i++){
+        
+//         if (str[i] === word) {
+            
+//             neww += ' ' + str[i + 1].toUpperCase()
+//             i++
+//         }
+//         else if (i === 0) {
+//             neww += str[i].toUpperCase()
+
+//         }
+//         else {
+//                neww += str[i]
+               
+//         }
+
+//     }
+//     console.log(neww);
+    
+// }
+
+//  cov("hello_world_from_js")
+
 // !27. Find the longest word in the sentence "The quick brown fox jumped over the lazy dog".
 
+// function long(str) {
+//     let obb = {}
+//     let lognword = ''
+//     let longnum = 0
+//     let arr = str.split(' ')
+
+//     for (let i = 0; i < arr.length; i++) {
+           
+//         let word = arr[i];
+//         if (word.length > longnum) {
+//             lognword = word
+//             longnum = word.length
+
+//         }
+//     }
+
+//     console.log(" long word in this string is", lognword + " " + longnum);
+    
+
+// }
+
+// long("The quick brown fox jumped over the lazy dog")
+ 
+//? without split()
+// function findLongestWord(str) {
+//     let currWord = '';
+//     let longestWord = '';
+//     let maxLength = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+//         let char = str[i];
+
+//         if (char !== ' ') {
+//             currWord += char;
+//         } else {
+//             if (currWord.length > maxLength) {
+//                 maxLength = currWord.length;
+//                 longestWord = currWord;
+//             }
+//             currWord = ''; // ?reset for next word
+//         }
+//     }
+
+       //  ? Final check for last word (after loop ends)
+//     if (currWord.length > maxLength) {
+//         longestWord = currWord;
+//         maxLength = currWord.length;
+//     }
+
+//     console.log("Longest word:", longestWord, "→", maxLength, "letters");
+// }
+
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+
+
 // !28. Check if two strings are anagrams of each other ("listen", "silent").
+  
+// function ana(str1, str2) {
+//     if (str1.length !== str2.length) {
+//         console.log("Not anagrams (different lengths)");
+//         return false;
+//     }
+
+//     let freq = {};
+
+//     // Count characters in str1
+//     for (let i = 0; i < str1.length; i++) {
+//         let char = str1[i];
+//         if (freq[char]) {
+//             freq[char]++;
+//         } else {
+//             freq[char] = 1;
+//         }
+//     }
+
+//     // Subtract using characters in str2
+//     for (let i = 0; i < str2.length; i++) {
+//         let char = str2[i];
+//         if (!freq[char]) {
+//             console.log("Not anagrams");
+//             return false;
+//         } else {
+//             freq[char]--;
+//         }
+//     }
+
+//     // Final check: all values must be 0
+//     for (let key in freq) {
+//         if (freq[key] !== 0) {
+//             console.log("Not anagrams");
+//             return false;
+//         }
+//     }
+
+//     console.log("Anagrams");
+//     return true;
+// }
+
+// ana("listen", "sil7nt"); // ✅ Anagrams
+
 
 // !29. Encrypt a string by shifting characters by 1 ("abc" → "bcd")
+
+ 
+
 
 // !30. Count how many words are in the sentence "This is just a test" → 5
 
 
+
+//? JS Array Practice (Level-Wise)
+
+//todo: 🔹 Level 1: Basic Methods
+
+// !1. Use array methods like push(), pop(), shift(), unshift(), length.
+// let arr = [1, 2, 3, 4, 5];
+// let arr1 = arr.push(6)
+// let arr2 = arr.pop()
+// let arr3 = arr.shift()
+// let arr4 = arr.unshift(3)
+// let arr5 = arr.length
+
+// console.log(typeof(  arr5, arr ));
+
+
+
+// !2. Create an array of fruits and add "grape" at the end.
+
+// ? use push().
+
+let fruits = ["appli", "banana", "orange"]
+ 
+// let addNewFruits = fruits.push("grape")
+// console.log(addNewFruits);
+
+//? without push()
+// function isAdd(val) {
+    
+//     fruits[fruits.length] = val
+    
+//     console.log(fruits);
+    
+// }
+
+// isAdd("grape")
+
+ 
+
+// !3. Remove the last element from [1, 2, 3, 4].
+
+// let arr = [1, 2, 3, 4]
+
+// arr.pop()
+// console.log(arr);
+
+
+// !4. Add "start" to the beginning of ["a", "b"].
+         
+// let arr = ["a", "b"]
+   
+// arr.unshift("start")
+// console.log(arr);
+
+
+//!5. Remove the first item from ["first", "second", "third"].
+
+// let item = ["first", "second", "third"]
+
+// item.shift()
+//  console.log(item);
+ 
+
+//!6Find the length of ["x", "y", "z"].
+
+// let arr = ["x", "y", "z"]
+// let lengthOfArr = arr.length
+// console.log(lengthOfArr);
+
+
+
+
+// todo🔹 Level 2: Loop & Access
+
+// Use for, for...of, or forEach() to access items.
+
+// Print all elements of [10, 20, 30, 40].
+
+// let arr = [10, 20, 30, 40]
+// function printArr(arr) {
+//     for (let i = 0; i < arr.length; i++){
+//         console.log(arr[i]);
+        
+//     }
+// }
+// printArr(arr)
+ 
+
+// !7. Print only even numbers from [1, 2, 3, 4, 5, 6].
+
+// let arr = [1, 2, 3, 4, 5, 6]
+
+// function evenNum(arr) {
+//     let evenArr = []
+//     for(let val of arr)
+//     {
+//         let even = val % 2
+//         if (even === 0) {
+//             evenArr.push(val)
+            
+//         }
+//     }
+//     console.log(evenArr);
+    
+// }
+
+// evenNum(arr)
+
+//!8. Print every character in ["a", "b", "c"] using for...of.
+//  let arr = ["a", "b", "c"]
+// function evertChar(arr) {
+//     let newArr = []
+//     for (let val of arr) {
+//           newArr.push(val)
+//     }
+//     console.log(newArr);
+    
+//   }
+//  evertChar(arr)
+   
+// 🔹 Level 3: Advanced Methods
+// Use .map(), .filter(), .reduce(), .find(), .includes()
+
+// Create a new array from [1, 2, 3] where each element is doubled.
+
+// From [2, 5, 8, 11], filter out numbers > 5.
+
+// Sum all numbers in [1, 2, 3, 4] using .reduce().
+
+// Check if 7 is present in [4, 5, 6, 7, 8].
+
+// Find the first even number in [1, 3, 5, 6, 7].
+
+// 🔹 Level 4: Real-Use Patterns
+// Logic-based with loops and conditions.
+
+// !Reverse [1, 2, 3, 4] without .reverse().
+//  let arr = [1, 2, 3, 4,5,6,7,8,9]
+// function reverse(arr) {
+//      let reverseArr = []
+//     for (let i = arr.length -1 ; i >= 0; i--){
+//           reverseArr.push(arr[i])
+//     }
+//     console.log(reverseArr);
+    
+// }
+//  reverse(arr)
+//! Count how many times 2 appears in [2, 3, 2, 5, 2, 6].
+
+// let arr = [2, 3, 2, 5, 2, 6]
+
+// function times(arr, s) {
+//     let appval = 0
+//     for (let i = 0; i < arr.length; i++)
+//     {
+//         if (s == arr[i]) {
+//           appval+=1
+//       }
+//     }
+//     console.log(appval);
+    
+    
+    
+// }
+// times(arr, 2)
+  
+//! Remove all null or undefined values from an array.
+
+// Merge two arrays [1,2] and [3,4] into [1,2,3,4].
+
+let arr1 = [1, 2]
+let arr2 = [3, 4]
+ 
+let newarr = [...arr1, ...arr2]
+
+console.log(newarr);
+
+
+// 🔹 Level 5: Challenge Mode
+// Apply logic + methods.
+
+// Find the second largest number in [10, 5, 20, 8]. 
+
+// Remove duplicates from [1,2,2,3,4,4,5].
+
+// Find common elements between [1,2,3] and [2,3,4].
+
+// Flatten nested array [1, [2, 3], [4, [5]]] → [1,2,3,4,5].
 
 
 
