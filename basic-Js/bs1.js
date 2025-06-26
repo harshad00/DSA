@@ -733,18 +733,39 @@ let fruits = ["appli", "banana", "orange"]
 
 // Merge two arrays [1,2] and [3,4] into [1,2,3,4].
 
-let arr1 = [1, 2]
-let arr2 = [3, 4]
+// let arr1 = [1, 2]
+// let arr2 = [3, 4]
  
-let newarr = [...arr1, ...arr2]
+// let newarr = [...arr1, ...arr2]
 
-console.log(newarr);
+// console.log(newarr);
 
 
 // 🔹 Level 5: Challenge Mode
 // Apply logic + methods.
 
-// Find the second largest number in [10, 5, 20, 8]. 
+// Find the second largest number in [10, 5, 20, 8].
+let arr = [10, 5, 20, 8]
+function secLar(arr) {
+    let first = -Infinity;
+    let second = -Infinity;
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > first) {
+            
+            second = first;
+            first = arr[i]
+        }
+        else if (arr[i] > second && arr[i] !== first) {
+            screen = arr[i]
+        }
+
+    }
+    console.log(second);
+     
+    }
+    
+
+secLar(arr)
 
 // Remove duplicates from [1,2,2,3,4,4,5].
 
