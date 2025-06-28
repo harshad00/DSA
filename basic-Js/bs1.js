@@ -745,31 +745,68 @@ let fruits = ["appli", "banana", "orange"]
 // Apply logic + methods.
 
 // Find the second largest number in [10, 5, 20, 8].
-let arr = [10, 5, 20, 8]
-function secLar(arr) {
-    let first = -Infinity;
-    let second = -Infinity;
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i] > first) {
+// let arr = [10, 5, 20, 8]
+// function secLar(arr) {
+//     let first = -Infinity;
+//     let second = -Infinity;
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] > first) {
             
-            second = first;
-            first = arr[i]
-        }
-        else if (arr[i] > second && arr[i] !== first) {
-            screen = arr[i]
-        }
+//             second = first;
+//             first = arr[i]
+//         }
+//         else if (arr[i] > second && arr[i] !== first) {
+//             screen = arr[i]
+//         }
 
-    }
-    console.log(second);
+//     }
+//     console.log(second);
      
-    }
+//     }
     
 
-secLar(arr)
+// secLar(arr)
+// // *  Second largest number with sort array
 
-// Remove duplicates from [1,2,2,3,4,4,5].
+// function sl(arr) {
+//      let sortarr =  arr.sort((b,a)=> (b-a)); // Sort in descending order
+//     console.log(sortarr);
+    
+//     let larnum = sortarr.length - 2;
+//     console.log(sortarr[larnum]);
+    
+// }
+// sl(arr)
+
+ 
+// !Remove duplicates from [1,2,2,3,4,4,5].
+//  let arr = [1, 2, 2, 3, 4, 4, 5];
+
+// function removeDuplicates(arr) {
+//   let newarr = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let isDuplicate = false;
+
+//     for (let j = 0; j < newarr.length; j++) {
+//       if (arr[i] === newarr[j]) {
+//         isDuplicate = true;
+//         break;
+//       }
+//     }
+
+//     if (!isDuplicate) {
+//       newarr.push(arr[i]);
+//     }
+//   }
+
+//   console.log(newarr);
+// }
+
+// removeDuplicates(arr)
 
 // Find common elements between [1,2,3] and [2,3,4].
+
 
 // Flatten nested array [1, [2, 3], [4, [5]]] → [1,2,3,4,5].
 
