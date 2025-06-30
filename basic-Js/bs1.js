@@ -805,13 +805,62 @@ let fruits = ["appli", "banana", "orange"]
 
 // removeDuplicates(arr)
 
-// Find common elements between [1,2,3] and [2,3,4].
+//! Find common elements between [1,2,3] and [2,3,4].
+// let arr1 = [1, 2, 3]
+// let arr2 = [ 2,3,4]
+// function common(arr1, arr2) {
+//     let commonarr = []
+//     for (let i = 0; i < arr1.length; i++){
+//         let valarr1 = arr1[i]
+//         for (let j = 0; j < arr2.length; j++){
+//             if (valarr1 === arr2[j]) {
+//                 commonarr.push(valarr1)
+//             }
+//         }
+
+//     }
+//     console.log(commonarr);
+    
+    
+// }
+
+// common(arr1, arr2)
+
+// let a = [1,2,2,3,4,5,6,54,33,4,4,5,4,5,4]
+
+// let ar = new Set(a)
+// console.log(ar);
+
+//! Flatten nested array [1, [2, 3], [4, [5]]] → [1,2,3,4,5].
+
+let al =    [1, [2, 3], [4, [5]]]
+
+let newar = al.flat(2)
+ console.log(newar);
+ 
+ 
+function nested(arr) {
+    let val1 = []
+    let stack = [...arr]
+    
+    while (stack.length) {
+        
+        let val = stack.pop();
+
+        if (Array.isArray(val)) {
+            stack.push(...val)
+            
+        } else {
+           val1.push(val)
+        }
+    }
+    let f1 = val1.reverse()
+    console.log(f1);
+    
+ }
 
 
-// Flatten nested array [1, [2, 3], [4, [5]]] → [1,2,3,4,5].
-
-
-
+  nested(al)
 
 
  
