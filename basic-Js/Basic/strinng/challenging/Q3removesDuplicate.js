@@ -19,3 +19,30 @@ function removeDuplicateCharacters(str) {
 }
 
 removeDuplicateCharacters("programming");
+
+
+// 
+// function removedubchar(str) {
+//     let nodupchar = '';
+
+//     for (let i = 0; i < str.length; i++) {
+//         let alreadyExists = false;
+
+//         for (let j = 0; j < nodupchar.length; j++) {
+//             if (str[i] === nodupchar[j]) {
+//                 alreadyExists = true;
+//                 break;
+//             }
+//         }
+
+//         if (!alreadyExists) {
+//             nodupchar += str[i];
+//         }
+//     }
+
+//     console.log(nodupchar);
+// }
+
+// removedubchar("programming"); // Output: progamin
+
+
